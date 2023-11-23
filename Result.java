@@ -1,3 +1,5 @@
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Classe Result é responsável por gerar o maior número decente com base em
@@ -9,8 +11,10 @@ class Result {
      * Gera e imprime o maior número decente com o comprimento especificado.
      * @param n O comprimento do número decente a ser criado.
      */
+  private static final Logger LOGGER = Logger.getLogger(Result.class.getName());
 
     public static void decentNumber(int n) {
+        long startTime = System.currentTimeMillis();
         int total_threes = n;
         int total_fives = 0;
 
@@ -21,6 +25,7 @@ class Result {
 
         if (total_threes < 0) {
             System.out.println("-1");
+             LOGGER.log(Level.INFO, "-1");
         } else {
             StringBuilder decentNum = new StringBuilder(total_threes + total_fives);
 
@@ -33,6 +38,12 @@ class Result {
             }
 
             System.out.println(decentNum);
+            LOGGER.log(Level.INFO, decentNum.toString());
         }
+
+        long endTime = System.currentTimeMillis();
+        long executionTime = endTime - startTime;
+        System.out.println("Tempo de execução: " + executionTime + " milissegundos");
+        LOGGER.log(Level.INFO, "Tempo de execução: " + executionTime + " milissegundos");
     }
 }

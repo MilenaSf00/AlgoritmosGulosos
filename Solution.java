@@ -1,4 +1,7 @@
 import java.io.*;
+import java.nio.charset.Charset;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.IntStream;
 
 /**
@@ -7,6 +10,7 @@ import java.util.stream.IntStream;
  * 
  */
 public class Solution {
+    private static final Logger LOGGER = Logger.getLogger(Result.class.getName());
 
     /**
      * @Método principal que solicita ao usuário o número de casos de teste e os
@@ -16,19 +20,22 @@ public class Solution {
 
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Insira o número de casos de teste:");
+        LOGGER.log(Level.INFO, "Insira o número de casos de teste:");
         int t = Integer.parseInt(bufferedReader.readLine().trim());
-
-        IntStream.range(0, t).forEach(tItr -> {
+            
+        for (int tItr = 0; tItr < t; tItr++) {
             try {
-                System.out.println("Insira o valor de n para o caso de teste " + (tItr + 1) + ":");
+                System.out.println("---------------------------------");
+            
+                LOGGER.log(Level.INFO, "Insira o valor de n para o caso de teste " + (tItr + 1) + ":");
+                
                 int n = Integer.parseInt(bufferedReader.readLine().trim());
 
                 Result.decentNumber(n);
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
-            }
-        });
+ }
+        }
 
         bufferedReader.close();
     }
