@@ -1,46 +1,17 @@
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
 
-class Result {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.stream.IntStream;
 
-    /*
-     * Complete the 'decentNumber' function below.
-     *
-     * The function accepts INTEGER n as parameter.
-     */
 
-    public static void decentNumber(int n) {
-    // Write your code here
 
-    }
-
-}
-
-public class Main {
+ public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int[] inputs = {1, 3, 5, 11}; 
 
-        int t = Integer.parseInt(bufferedReader.readLine().trim());
-
-        IntStream.range(0, t).forEach(tItr -> {
-            try {
-                int n = Integer.parseInt(bufferedReader.readLine().trim());
-
-                Result.decentNumber(n);
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        });
-
-        bufferedReader.close();
-    }
+        for (int n : inputs) {
+            Resultado.decentNumber(n);
+        }
+    } 
 }
