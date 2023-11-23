@@ -1,36 +1,28 @@
 class Result {
-    /*
-     * Complete the 'decentNumber' function below.
-     *
-     * The function accepts INTEGER n as a parameter.
-     */
 
-     public static void decentNumber(int n) {
-        int numThrees = n;
-        int numFives = 0;
+    public static void decentNumber(int n) {
+        int total_threes = n;
+        int total_fives = 0;
 
-        while (numThrees % 3 != 0) {
-            numThrees -= 5;
-            numFives += 5;
+        while (total_threes % 3 != 0) {
+            total_threes -= 5;
+            total_fives += 5;
         }
 
-        if (numThrees < 0) {
+        if (total_threes < 0) {
             System.out.println("-1");
         } else {
-            String repeated5 = repeatString("5", numThrees);
-            String repeated3 = repeatString("3", numFives);
-            
-            System.out.println(repeated5 + repeated3);
-        }
-    }
+            StringBuilder decentNum = new StringBuilder(total_threes + total_fives);
 
-    private static String repeatString(String str, int count) {
-        StringBuilder repeated = new StringBuilder();
-        for (int i = 0; i < count; i++) {
-            repeated.append(str);
+            for (int i = 0; i < total_threes; i++) {
+                decentNum.append("5");
+            }
+
+            for (int i = 0; i < total_fives; i++) {
+                decentNum.append("3");
+            }
+
+            System.out.println(decentNum);
         }
-        return repeated.toString();
     }
 }
-
-
