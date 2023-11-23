@@ -1,12 +1,14 @@
 
-
-/*
- * Classe Result
- * @
- * 
+/**
+ * Classe Result é responsável por gerar o maior número decente com base em
+ * propriedades específicas.
  */
 
 class Result {
+    /**
+     * Gera e imprime o maior número decente com o comprimento especificado.
+     * @param n O comprimento do número decente a ser criado.
+     */
 
     public static void decentNumber(int n) {
         int total_threes = n;
