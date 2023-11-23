@@ -43,7 +43,7 @@ class Result {
 
         long endTime = System.currentTimeMillis();
         long executionTime = endTime - startTime;
-        System.out.println("Tempo de execução: " + executionTime + " milissegundos");
+        
         LOGGER.log(Level.INFO, "Tempo de execução: " + executionTime + " milissegundos");
     }
 }
