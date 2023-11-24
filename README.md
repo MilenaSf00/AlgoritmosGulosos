@@ -8,5 +8,5 @@
 <p>O JDK inclui o Java Runtime Environment (JRE), que é necessário para executar aplicativos Java, e também ferramentas de desenvolvimento adicionais. Você pode baixar o JDK no site oficial da Oracle ou utilizar uma distribuição OpenJDK </p>
 
 <h3> 2. Clone o projeto </h3>
-<p> Abra sua IDE ou mesmo por linha de comando no próprio prompt de comando, navegue até o diretório onde deseja clona o repositório e clone o projeto. O link para clonar o projeto é https://github.com/MilenaSf00/AlgoritmosGulosos.git. </p>
+<p> Abra sua IDE ou mesmo por linha de comando no próprio prompt de comando, navegue até o diretório onde deseja clonar o repositório e clone o projeto. O link para clonar o projeto é https://github.com/MilenaSf00/AlgoritmosGulosos.git. </p>
 
