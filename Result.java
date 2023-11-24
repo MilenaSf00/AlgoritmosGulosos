@@ -6,13 +6,18 @@ import java.util.logging.Logger;
  * propriedades específicas.
  */
 
-class Result {
+public class Result {
+ 
     /**
-     * Gera e imprime o maior número decente com o comprimento especificado.
-     * @param n O comprimento do número decente a ser criado.
+     * O logger para registrar informações.
      */
   private static final Logger LOGGER = Logger.getLogger(Result.class.getName());
 
+  /**
+     * Gera e imprime o maior número decente com o comprimento especificado.
+     *
+     * @param n O comprimento do número decente a ser criado.
+     */
     public static void decentNumber(int n) {
         long startTime = System.currentTimeMillis();
         int total_threes = n;

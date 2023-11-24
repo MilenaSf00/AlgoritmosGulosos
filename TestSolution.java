@@ -21,7 +21,7 @@ public class TestSolution {
         testSingleCase(1);
 
         System.out.println("Teste 2:");
-        testSingleCase(3);
+        testSingleCase(10000);
 
         System.out.println("Teste 3:");
         testSingleCase(5);
